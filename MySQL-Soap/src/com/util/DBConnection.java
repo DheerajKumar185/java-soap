@@ -14,7 +14,7 @@ public class DBConnection {
 			//Class.forName("oracle.jdbc.driver.OracleDriver");
 			Class.forName(rb.getString("driver")).newInstance();
  			con = DriverManager.getConnection(rb.getString("url"), rb.getString("username"), rb.getString("password"));
-		//	con = DriverManager.getConnection("jdbc:oracle:thin:@10.125.125.34:1521:xe", "meduser",	"MEDUSER");
+		//	con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "test",	"test");
 			con.setAutoCommit(false);		
  		
 			} catch (Exception e) {
